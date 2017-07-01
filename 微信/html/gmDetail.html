@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<style>
+			#list, .mui-content-padded {
+				margin:15px;background:#fff;
+			}
+			.mui-content-padded {
+				height:150px;
+			}
+			.mui-table-view-chevron .mui-table-view-cell {
+				padding-right:15px;
+			}
+			.mui-table-view-cell.mui-active {
+				background:#fff;
+			}
+			.mui-table-view-cell div {
+				display:flex;
+				display:-webkit-flex;
+			}
+			.mui-table-view-cell div .title {
+				width:50%;color:#000;font-size:17px;
+				
+			}
+			.mui-table-view-cell div .content {
+				width:100%;color:#555;font-size:17px;
+			}
+			#map, #list {
+				box-shadow:0 0 3px 2px #DDDDDD;
+			}
+			.mui-content img{
+				max-height: 150px;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">场馆详情</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				    <div class="mui-slider-item"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				    <!--支持循环，需要重复图片节点-->
+				    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="../images/e1.jpg" /></a></div>
+				</div>
+			</div>
+			<ul id="list" class="mui-table-view mui-table-view-chevron">
+			    
+				<li class="mui-table-view-cell">
+					<div>
+						<p class="title">场馆名称：</p>
+						<p class="content">民大游泳馆馆</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell">
+					<div>
+						<p class="title">联系电话：</p>
+						<p class="content">18842629353</p>
+					</div>
+				</li>
+				<li class="mui-table-view-cell mui-collapse">
+					<a class="mui-navigate-right" href="#">场馆简介:</a>
+					<div class="mui-collapse-content">
+						<p>开放时间: 9:00-18:00</p>
+						<p class="">游泳馆：10片标准双打木地板场地</p>
+					    <p>2012年2月开工建设，2013年 12月竣工，该馆是在老游泳馆旧址上的重建建筑，其结构形式为钢筋混凝土框架、屋面钢结构、局部网架，建筑高度为14.5m，建筑面积6247平方米，拥有一个8泳道标准游泳池和一个8泳道非标准游泳池，主要用于我校航海类专业学生游泳教学和水上技能训练。</p>
+					    
+					</div>
+					
+				</li>
+				<li class="mui-table-view-cell">
+					<div>
+						<p class="title">场馆地址：</p>
+						<p class="content">金石滩大连民族大学金石路31路</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="mui-content-padded" id="map"></div>
+		<div class="mui-tar">	
+		    <a href="gmReserve.html"><span>立即预定</span>	</a><span></span>		
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=9neIND4GPoAnV9TGjRxC6U4vCuIOyRkE"></script>
+	<script type="text/javascript">
+	    //获得slider插件对象
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		// 百度地图API功能
+		var map = new BMap.Map("map");    // 创建Map实例
+		map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+		map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+		map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+	</script>
+</html>

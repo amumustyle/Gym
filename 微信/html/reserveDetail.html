@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<style>
+			#list, #tips {
+				margin:15px;
+			}
+			.mui-table-view-cell:active{
+				background:#EEEEEE;
+			}
+			.mui-content-padded h5 {
+				margin-bottom:15px;
+			}
+			.mui-content-padded p {
+				padding-left:5px;
+			}
+			button.mui-btn {
+				padding:10px;
+			}
+			.mui-input-group .mui-input-row {
+				position:static;border-bottom:0;height:auto;min-height:40px;
+			}
+			.mui-input-row label.content {
+				width:65%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">预约详细</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group" style="padding:15px 0;">
+				<div class="mui-input-row">
+					<label>预约场馆</label>
+					<label class="content"><a href="gmDetail.html">民大游泳馆</a></label>
+				</div>
+				<div class="mui-input-row">
+					<label>预约时间</label>
+					<label class="content">2017-10-18 11:00-12:00</label>
+				</div>
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<label class="content">木木</label>
+				</div>
+				<div class="mui-input-row">
+					<label>性别</label>
+					<label class="content">女</label>
+				</div>
+				<div class="mui-input-row">
+					<label>手机</label>
+					<label class="content">18842629353</label>
+				</div>
+				<div style="padding:15px;padding-bottom:0;">
+					<button type="button" id="confirmCancel" class="mui-btn mui-btn-primary mui-btn-block">取消预约</button>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.min.js"></script>
+	<script>
+		(function($, doc) {
+			doc.getElementById("confirmCancel").addEventListener('tap', function() {
+				var btnArray = ['返回', '确认'];
+				mui.confirm('确认是否取消该预约？', '取消提醒', btnArray, function(e) {
+					if(e.index == 1) {
+						location = 'reserveCancel.html'
+					}
+				})
+			});
+		}(mui, document));
+	</script>
+</html>

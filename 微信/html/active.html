@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<style>
+			#list, #tips {
+				margin:15px;
+			}
+			.mui-content-padded h5 {
+				margin-bottom:15px;
+			}
+			.mui-content-padded p {
+				text-indent:2em;margin-bottom:0;
+			}
+			.mui-control-content {
+				min-height: 150px;
+			}
+			.mui-control-content img{
+				max-height: 120px;
+			}
+			.mui-col-xs-8 {
+				padding-right:24px;
+			}
+			.mui-input-row .mui-btn {
+				font-size: 16px;
+				padding: 0;
+				width:65%;
+			}
+			.mui-text-right .mui-btn {
+				position:absolute;bottom:0;right:0;
+			}
+			.mui-text-right:before {
+				position:absolute;
+				background:#EEEDEF;
+				width:1px;
+				height:100%;
+				left:2%;
+				bottom:0;
+				z-index:3;
+				content:'';
+			}
+			.mui-navigate-right:after {
+				right:35%;font-size:24px;
+			}
+			.price{
+				position: absolute;
+				left: 48%;
+				color: #dd524d;
+				font-size: 18px;
+				top:6%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">场馆资讯</h1>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div class="mui-segmented-control mui-segmented-control-negative">
+					<a class="mui-control-item mui-active" href="#item1">
+						活动通知
+					</a>
+					<a class="mui-control-item" href="#item2">
+						场馆通知
+					</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+				    <ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>乒乓球比赛</label>	
+					                <p class='mui-ellipsis'>2017-2018年杯乒乓球赛定于5月10日在民大体育馆举行</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>乒乓球比赛</label>	
+					                <p class='mui-ellipsis'>2017-2018年杯乒乓球赛定于5月10日在民大体育馆举行</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>乒乓球比赛</label>	
+					                <p class='mui-ellipsis'>2017-2018年杯乒乓球赛定于5月10日在民大体育馆举行</p>
+					            </div>
+					        </a>
+					    </li>
+					</ul>
+					
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>民大羽毛球馆预约通知</label>	
+					                <p class='mui-ellipsis'>2017年4月29-5月2日羽毛球馆暂停网上预约</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>民大羽毛球馆</label>	
+					                <p class='mui-ellipsis'>2017年4月29-5月2日羽毛球馆暂停网上预约</p>
+					            </div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media">
+					        <a href="javascript:;">
+					            <img class="mui-media-object mui-pull-left" src="../images/act.jpg">
+					            <div class="mui-media-body">
+					                <label>民大羽毛球馆</label>	
+					                <p class='mui-ellipsis'>2017年4月29-5月2日羽毛球馆暂停网上预约</p>
+					            </div>
+					        </a>
+					    </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.min.js"></script>
+	<script>
+	//传入toggle参数，用户也无需关心当前是显示还是隐藏状态，mui会自动识别处理；
+     //    mui('.mui-popover').popover('toggle',document.getElementById("openPopover"));
+	    // mui('.bottomPopover').popover(status[,anchor]);
+		(function($) {
+			//阻止事件冒泡
+			var stopEvent = function(event) {
+				var e = event || window.event;
+				if(e.stopPropagation) {
+					e.stopPropagation();
+				} else {
+					e.cancelBubble = true;
+				}
+			};
+			$(document).on('tap', '.mui-btn-primary', function(e) {
+				location = 'gmReserve.html';
+				stopEvent(e);
+			});
+			$(document).on('tap', '.mui-table-view-cell', function(e) {
+				var id = $(this)[0].id;//获取点击对象id
+				location = 'gmDetail.html?id=' + id;
+			});
+			$.init();
+		}(mui));
+	</script>
+</html>

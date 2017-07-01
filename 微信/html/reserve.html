@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<style>
+			#list, #tips {
+				margin:15px;
+			}
+			.mui-content-padded h5 {
+				margin-bottom:15px;
+			}
+			.mui-content-padded p {
+				text-indent:2em;margin-bottom:0;
+			}
+			.mui-control-content {
+				min-height: 150px;
+			}
+			.mui-control-content img{
+				max-height: 120px;
+			}
+			.mui-col-xs-8 {
+				padding-right:24px;
+			}
+			.mui-input-row .mui-btn {
+				font-size: 16px;
+				padding: 0;
+				width:65%;
+			}
+			.mui-text-right .mui-btn {
+				position:absolute;bottom:0;right:0;
+			}
+			.mui-text-right:before {
+				position:absolute;
+				background:#EEEDEF;
+				width:1px;
+				height:100%;
+				left:2%;
+				bottom:0;
+				z-index:3;
+				content:'';
+			}
+			.mui-navigate-right:after {
+				right:35%;font-size:24px;
+			}
+			.price{
+				position: absolute;
+				left: 48%;
+				color: #dd524d;
+				font-size: 18px;
+				top:6%;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">场馆列表</h1>
+		</header>
+		<div class="mui-content">
+			<div style="padding: 10px 10px;">
+				<div class="mui-segmented-control mui-segmented-control-negative">
+					<a class="mui-control-item mui-active" href="#item1">
+						附近搜索
+					</a>
+					<a class="mui-control-item" href="#item2">
+						条件搜索
+					</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				        <li class="mui-table-view-cell" id="1234">
+				            <img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+
+					                    <p class="price"><strong>￥10</strong></p>
+
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				        <li class="mui-table-view-cell" id="456">
+				        	<img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+					                    <p class="price"><strong>￥10</strong></p>
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				        <li class="mui-table-view-cell" id="785">
+				        	<img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+					                    <p class="price"><strong>￥10</strong></p>
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				    </ul>
+				</div>
+				<div id="item2" class="mui-control-content">
+				    <!-- <div id="popover" class="mui-popover">
+				        <form class="mui-input-group">
+						<ul class="mui-table-view">
+						    <li class="mui-table-view-cell"><a href="#">游泳</a></li>
+						    <li class="mui-table-view-cell"><a href="#">乒乓球</a></li>
+						    <li class="mui-table-view-cell"><a href="#">篮球</a></li>
+						    <li class="mui-table-view-cell"><a href="#">足球</a></li>
+						    <li class="mui-table-view-cell"><a href="#">游泳</a></li>
+						</ul>
+						</form>
+					</div>
+					<a href="#popover" id="openPopover" class="mui-btn mui-btn-primary mui-btn-block">打开弹出菜单</a> -->
+					<div class="mui-content-padded" style="padding-right:5px;margin-top:0;">
+						<form class="mui-input-group">
+
+							<div class="mui-input-row">
+								<label>类型</label>
+								<select class="mui-btn mui-btn-block">
+									<option value="item-1">请选择项目</option>
+									<option value="item-1">羽毛球</option>
+									<option value="item-1">乒乓球</option>
+									<option value="item-1">篮球</option>
+									<option value="item-1">足球</option>
+									<option value="item-1">游泳</option>
+								</select>
+							</div>
+						</form>
+						<div class="mui-content-padded" style="margin:0;margin-top:10px;overflow:hidden;">
+							<div class="mui-input-row mui-search" style="margin:0;width:73%;float:left;">
+								<input type="search" class="mui-input-clear" placeholder="输入运动项目进行搜索"/>
+							</div>
+							<button type="button" style="float:right;width:25%;" class="mui-btn mui-btn-search">搜索</button>
+						</div>
+					</div>
+					<!-- <div class="mui-content-padded">
+						<h5 style="text-align:center;">暂无匹配数据</h5>
+					</div> -->
+					<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+				        <li class="mui-table-view-cell">
+				        	<img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+					                    <p class="price"><strong>￥10</strong></p>
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+					                    <p class="price"><strong>￥10</strong></p>
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				        <li class="mui-table-view-cell">
+				        	<img class="banner" width="100%" src="../images/e1.jpg"/>
+				        	<a class="mui-navigate-right">
+					            <div class="mui-table">
+					                <div class="mui-table-cell mui-col-xs-8">
+					                    <h4 class="mui-ellipsis">民大游泳馆</h4>
+					                    <p class="mui-h5 mui-ellipsis">地址:金石滩大连民族大学金石路31路</p>
+					                    <p class="mui-h5 mui-ellipsis">联系电话:18842629353</p>
+					                </div>
+					                <div class="mui-table-cell mui-col-xs-4 mui-text-right">
+					                    <p class="price"><strong>￥10</strong></p>
+					                    <button type="button" class="mui-btn mui-btn-primary">立即预约</button>
+					                </div>
+					            </div>
+				           	</a>
+				        </li>
+				    </ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/mui.min.js"></script>
+	<script>
+	//传入toggle参数，用户也无需关心当前是显示还是隐藏状态，mui会自动识别处理；
+     //    mui('.mui-popover').popover('toggle',document.getElementById("openPopover"));
+	    // mui('.bottomPopover').popover(status[,anchor]);
+		(function($) {
+			//阻止事件冒泡
+			var stopEvent = function(event) {
+				var e = event || window.event;
+				if(e.stopPropagation) {
+					e.stopPropagation();
+				} else {
+					e.cancelBubble = true;
+				}
+			};
+			$(document).on('tap', '.mui-btn-primary', function(e) {
+				location = 'gmReserve.html';
+				stopEvent(e);
+			});
+			$(document).on('tap', '.mui-table-view-cell', function(e) {
+				var id = $(this)[0].id;//获取点击对象id
+				location = 'gmDetail.html?id=' + id;
+			});
+			$.init();
+		}(mui));
+	</script>
+</html>
